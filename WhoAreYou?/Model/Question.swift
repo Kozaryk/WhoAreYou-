@@ -16,33 +16,33 @@ extension Question {
     static func getQuestions() -> [Question] {
         return [
             Question(
-                text: "Какую пищу предпочитаете?",
+                text: "What food do you prefer?",
                 type: .single,
                 answers: [
-                    Answer(text: "Стейк", type: .dog),
-                    Answer(text: "Рыба", type: .cat),
-                    Answer(text: "Морковь", type: .rabbit),
-                    Answer(text: "Кукуруза", type: .turtle)
+                    Answer(text: "Steak", type: .dog),
+                    Answer(text: "Fish", type: .cat),
+                    Answer(text: "Carrot", type: .rabbit),
+                    Answer(text: "Corn", type: .turtle)
                 ]
             ),
             Question(
-                text: "Что вам нравиться больше?",
+                text: "What do you like best?",
                 type: .multiple,
                 answers: [
-                    Answer(text: "Плавать", type: .turtle),
-                    Answer(text: "Спать", type: .cat),
-                    Answer(text: "Обниматься", type: .rabbit),
-                    Answer(text: "Есть", type: .dog)
+                    Answer(text: "Swim", type: .turtle),
+                    Answer(text: "Sleep", type: .cat),
+                    Answer(text: "To hug", type: .rabbit),
+                    Answer(text: "Eat", type: .dog)
                 ]
             ),
             Question(
-                text: "Любите ли вы поездки на машине?",
+                text: "Do you like car trips?",
                 type: .ranged,
                 answers: [
-                    Answer(text: "Ненавижу", type: .cat),
-                    Answer(text: "Нервничаю", type: .rabbit),
-                    Answer(text: "Не замечаю", type: .turtle),
-                    Answer(text: "Обожаю", type: .dog)
+                    Answer(text: "I hate it", type: .cat),
+                    Answer(text: "I'm nervous", type: .rabbit),
+                    Answer(text: "Do not notice", type: .turtle),
+                    Answer(text: "I love it", type: .dog)
                 ]
             ),
         ]

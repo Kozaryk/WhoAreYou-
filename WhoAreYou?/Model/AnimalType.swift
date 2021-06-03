@@ -14,13 +14,13 @@ enum AnimalType: Character {
     var definition: String {
         switch self {
         case .dog:
-            return "Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравяться и всегда готовы помочь."
+            return "You enjoy being with your friends. You surround yourself with people you like and are always ready to help."
         case .cat:
-            return "Вы себе на уме. Любите гулять сами по себе. Вы цените одиночество."
+            return "You are on your mind. Love to walk on your own. You value being alone."
         case .rabbit:
-            return "Вам нравится все мягкое. Вы здоровы и полны энергии."
+            return "You like everything soft. You are healthy and full of energy."
         case .turtle:
-            return "Ваша сила - в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях."
+            return "Your strength lies in wisdom. Slow and thoughtful wins over long distances."
         }
     }
 }

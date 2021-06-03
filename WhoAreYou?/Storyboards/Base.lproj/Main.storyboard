@@ -122,18 +122,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1B-HL-Lx9">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="PSp-Ha-mNb" eventType="touchUpInside" id="WqW-nI-TsV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBv-TH-YG0">
                                         <rect key="frame" x="0.0" y="50" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="PSp-Ha-mNb" eventType="touchUpInside" id="XiR-ZS-qle"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-zt-tbd">
                                         <rect key="frame" x="0.0" y="100" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="PSp-Ha-mNb" eventType="touchUpInside" id="Vmq-9c-cvo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYe-on-4ge">
                                         <rect key="frame" x="0.0" y="150" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="PSp-Ha-mNb" eventType="touchUpInside" id="kid-IU-qdy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -164,6 +176,9 @@
                                         <rect key="frame" x="0.0" y="66.5" width="335" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Answer"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="PSp-Ha-mNb" eventType="touchUpInside" id="OdJ-6U-2oS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -230,6 +245,9 @@
                                         <rect key="frame" x="0.0" y="188" width="335" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Answer"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="PSp-Ha-mNb" eventType="touchUpInside" id="eW3-uM-bwz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -274,8 +292,8 @@
                         <outletCollection property="multipleSwitches" destination="Pqk-D2-F8n" collectionClass="NSMutableArray" id="Al5-QK-yIg"/>
                         <outletCollection property="multipleSwitches" destination="swu-DM-uT7" collectionClass="NSMutableArray" id="8HM-U8-oti"/>
                         <outletCollection property="multipleSwitches" destination="tVg-xS-bWu" collectionClass="NSMutableArray" id="ODo-Y1-x3B"/>
-                        <outletCollection property="rangedLabel" destination="W2s-3a-qBn" collectionClass="NSMutableArray" id="mgM-kO-nGS"/>
-                        <outletCollection property="rangedLabel" destination="yuq-VM-nJi" collectionClass="NSMutableArray" id="x9K-NY-RMZ"/>
+                        <outletCollection property="rangedLabels" destination="W2s-3a-qBn" collectionClass="NSMutableArray" id="mgM-kO-nGS"/>
+                        <outletCollection property="rangedLabels" destination="yuq-VM-nJi" collectionClass="NSMutableArray" id="x9K-NY-RMZ"/>
                         <segue destination="Tmf-9U-vhU" kind="show" identifier="resultSegue" id="yVZ-lg-bFz"/>
                     </connections>
                 </viewController>
@@ -318,10 +336,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Result" id="ZQu-Fk-iot">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Iy-pF-nhA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Iy-pF-nhA">
+                            <connections>
+                                <segue destination="Ugq-3J-BYv" kind="unwind" unwindAction="unwindWithSegue:" id="Y22-Ey-pfT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="WtN-Yp-AYt" id="ATe-xk-mqL"/>
+                        <outlet property="emojiLabel" destination="tpb-5Y-daw" id="CGY-mk-mlP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5u-Sm-qxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ugq-3J-BYv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2432.8000000000002" y="112.89355322338831"/>
         </scene>

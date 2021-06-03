@@ -8,16 +8,28 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    // 1. Массив ответов
-    // 2. Определить наиболее часто встречаемый тип животного
-    // 3. Отобразить результат
-    // 4. Избавиться от кнопки Back
     
-    var answers: [Answer] = []
+    @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
+    // 1. Массив ответов 👌🏼
+    var answers: [Answer] = []
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // 2. Определить наиболее часто встречаемый тип животного 👌🏼
+        let animals =  answers.map({ (animal)  in
+            return animal.type})
+        let countedSet = NSCountedSet(array: animals)
+        let mostFrequent = countedSet.max { countedSet.count(for: $0) < countedSet.count(for: $1) } as! AnimalType
+
+        // 3. Отобразить результат👌🏼
+        descriptionLabel.text  = mostFrequent.definition
+        emojiLabel.text =  "You're \(mostFrequent.rawValue)"
+
+        // 4. Избавиться от кнопки Back👌🏼
+        navigationItem.hidesBackButton = true
     }
 }
+
