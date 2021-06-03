@@ -9,6 +9,22 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var singleStackView: UIStackView!
+    @IBOutlet var singleButtons: [UIButton]!
+    
+    @IBOutlet weak var multipleStackView: UIStackView!
+    @IBOutlet var multipleLabels: [UILabel]!
+    @IBOutlet var multipleSwitches: [UISwitch]!
+    
+    @IBOutlet weak var rangedStackView: UIStackView!
+    @IBOutlet weak var rangedSlider: UISlider!
+    @IBOutlet var rangedLabel: [UILabel]!
+    
+    
+    
     var questions: [Question] = []
     private var questionIndex = 0 // индекс активного вопроса
     

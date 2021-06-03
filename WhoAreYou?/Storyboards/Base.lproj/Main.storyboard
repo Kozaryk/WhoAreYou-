@@ -102,7 +102,7 @@
         <!--Question №-->
         <scene sceneID="LzQ-dg-Jgg">
             <objects>
-                <viewController id="PSp-Ha-mNb" sceneMemberID="viewController">
+                <viewController id="PSp-Ha-mNb" customClass="QuestionsViewController" customModule="WhoAreYou_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="unr-L9-qlW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nzX-US-ocJ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nzX-US-ocJ" userLabel="Single Stack View">
                                 <rect key="frame" x="20" y="177" width="335" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1B-HL-Lx9">
@@ -137,20 +137,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Xt3-OC-Ig1">
-                                <rect key="frame" x="20" y="285" width="335" height="97"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xt3-OC-Ig1" userLabel="Ranged Stack View">
+                                <rect key="frame" x="20" y="284" width="335" height="99.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-dx-JC6">
                                         <rect key="frame" x="-2" y="0.0" width="339" height="31"/>
                                     </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="93n-F2-UKJ">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2s-3a-qBn">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuq-VM-nJi">
+                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12m-5A-k0O">
-                                        <rect key="frame" x="0.0" y="64" width="335" height="33"/>
+                                        <rect key="frame" x="0.0" y="66.5" width="335" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Answer"/>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H7R-Y4-Qgy">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H7R-Y4-Qgy" userLabel="Multiple Stack View">
                                 <rect key="frame" x="20" y="206.5" width="335" height="221"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZt-jU-MfF">
@@ -239,6 +256,26 @@
                     </view>
                     <navigationItem key="navigationItem" title="Question №" id="4tk-cD-4E9"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="H7R-Y4-Qgy" id="pH0-en-zdZ"/>
+                        <outlet property="progressView" destination="xAo-Oa-xjS" id="QFi-fK-mvh"/>
+                        <outlet property="questionLabel" destination="zDJ-xL-ZqE" id="pIo-hE-gVO"/>
+                        <outlet property="rangedSlider" destination="gaF-dx-JC6" id="Mgj-dR-Z5i"/>
+                        <outlet property="rangedStackView" destination="Xt3-OC-Ig1" id="tEV-0c-htM"/>
+                        <outlet property="singleStackView" destination="nzX-US-ocJ" id="1P0-xK-P0D"/>
+                        <outletCollection property="singleButtons" destination="o1B-HL-Lx9" collectionClass="NSMutableArray" id="V45-m0-6cG"/>
+                        <outletCollection property="singleButtons" destination="BBv-TH-YG0" collectionClass="NSMutableArray" id="CGx-tW-L1G"/>
+                        <outletCollection property="singleButtons" destination="UeV-zt-tbd" collectionClass="NSMutableArray" id="Jko-D7-f6R"/>
+                        <outletCollection property="singleButtons" destination="lYe-on-4ge" collectionClass="NSMutableArray" id="zPB-DX-PC8"/>
+                        <outletCollection property="multipleLabels" destination="B4N-Tb-ah3" collectionClass="NSMutableArray" id="LHu-4d-n0Q"/>
+                        <outletCollection property="multipleLabels" destination="dmh-zK-K94" collectionClass="NSMutableArray" id="VmK-kI-8AZ"/>
+                        <outletCollection property="multipleLabels" destination="wo4-xz-uog" collectionClass="NSMutableArray" id="61u-yE-l33"/>
+                        <outletCollection property="multipleLabels" destination="ISc-3a-Y2e" collectionClass="NSMutableArray" id="Rt4-Am-m7Q"/>
+                        <outletCollection property="multipleSwitches" destination="O0W-Kn-7II" collectionClass="NSMutableArray" id="Qwy-i5-oT5"/>
+                        <outletCollection property="multipleSwitches" destination="Pqk-D2-F8n" collectionClass="NSMutableArray" id="Al5-QK-yIg"/>
+                        <outletCollection property="multipleSwitches" destination="swu-DM-uT7" collectionClass="NSMutableArray" id="8HM-U8-oti"/>
+                        <outletCollection property="multipleSwitches" destination="tVg-xS-bWu" collectionClass="NSMutableArray" id="ODo-Y1-x3B"/>
+                        <outletCollection property="rangedLabel" destination="W2s-3a-qBn" collectionClass="NSMutableArray" id="mgM-kO-nGS"/>
+                        <outletCollection property="rangedLabel" destination="yuq-VM-nJi" collectionClass="NSMutableArray" id="x9K-NY-RMZ"/>
                         <segue destination="Tmf-9U-vhU" kind="show" identifier="resultSegue" id="yVZ-lg-bFz"/>
                     </connections>
                 </viewController>
@@ -249,7 +286,7 @@
         <!--Result-->
         <scene sceneID="eRn-C6-qfc">
             <objects>
-                <viewController id="Tmf-9U-vhU" sceneMemberID="viewController">
+                <viewController id="Tmf-9U-vhU" customClass="ResultViewController" customModule="WhoAreYou_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sJj-fW-jpl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
