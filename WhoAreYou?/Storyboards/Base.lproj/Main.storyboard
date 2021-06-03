@@ -18,16 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPc-wp-nyb">
-                                <rect key="frame" x="102.5" y="300" width="170.5" height="67.5"/>
+                                <rect key="frame" x="42.5" y="289" width="290" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which animal you are?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkh-Im-vNV">
-                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-Bc-TeM">
-                                        <rect key="frame" x="50.5" y="37.5" width="69" height="30"/>
+                                        <rect key="frame" x="101" y="53" width="88" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Start Quiz"/>
                                         <connections>
                                             <segue destination="ALu-D1-jmp" kind="presentation" modalPresentationStyle="fullScreen" id="LIZ-I7-Esc"/>
